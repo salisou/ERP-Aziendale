@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ApsnetCoreMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApsnetCoreMVC.Services
 {
@@ -7,5 +8,7 @@ namespace ApsnetCoreMVC.Services
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public DbSet<Fattura> Fatture { get; set; } = null!;
     }
 }
