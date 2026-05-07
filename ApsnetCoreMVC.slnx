@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="ApsnetCoreMVC/ApsnetCoreMVC.csproj" />
+  <Project Path="Models/Models.csproj" Id="93f1e5c2-f81d-4f61-902c-15bdfbb9ae05" />
 </Solution>

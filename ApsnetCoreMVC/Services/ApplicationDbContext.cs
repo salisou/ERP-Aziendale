@@ -1,4 +1,4 @@
-﻿using ApsnetCoreMVC.Models;
+﻿using Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApsnetCoreMVC.Services

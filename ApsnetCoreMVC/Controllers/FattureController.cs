@@ -1,4 +1,4 @@
-﻿using ApsnetCoreMVC.Models;
+﻿using Models;
 using ApsnetCoreMVC.Services;
 using Microsoft.AspNetCore.Mvc;
 

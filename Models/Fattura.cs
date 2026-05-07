@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ApsnetCoreMVC.Models
+namespace Models
 {
     [Table("Fatture")]
     public class Fattura
