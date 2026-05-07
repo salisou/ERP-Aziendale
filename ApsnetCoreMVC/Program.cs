@@ -1,7 +1,11 @@
 using ApsnetCoreMVC.Services;
 using Microsoft.EntityFrameworkCore;
+using ApsnetCoreMVC.Mappings;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -11,6 +15,12 @@ string conn = builder.Configuration.GetConnectionString("StrCon")
     ?? throw new InvalidOperationException("Connection string 'StrCon' not found.");
 
 builder.Services.AddDbContext<ApplicationDbContext>(o => o.UseSqlServer(conn));
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+builder.Host.UseSerilog((ctx, lc) => 
+    lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration)
+);
 
 var app = builder.Build();
 
