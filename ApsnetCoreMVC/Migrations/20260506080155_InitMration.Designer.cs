@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApsnetCoreMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260504100320_MigrazioneFattura")]
-    partial class MigrazioneFattura
+    [Migration("20260506080155_InitMration")]
+    partial class InitMration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,12 +1,10 @@
 html {
     font-size: 14px;
-    /*background-color: blue;*/  
 }
 
 @media (min-width: 768px) {
     html {
         font-size: 16px;
-        /*background-color: seagreen;*/
     }
 }
 

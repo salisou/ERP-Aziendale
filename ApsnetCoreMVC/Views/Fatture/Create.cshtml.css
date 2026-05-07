@@ -1,0 +1,93 @@
+﻿/* ================================
+   CONTENITORE PRINCIPALE DEL FORM
+   - Sfondo scuro elegante
+   - Ombra per effetto "card"
+   - Angoli arrotondati
+================================ */
+.invoice-wrapper {
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ================================
+   BOX DI OGNI SEZIONE (Fattura, Cliente, Servizio)
+   - Colore più scuro per separare visivamente
+   - Bordo leggero per definire il riquadro
+   - Padding interno per respirare
+================================ */
+.section-box {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+/* ================================
+   TITOLO DI OGNI SEZIONE
+   - Colore azzurro chiaro per risaltare
+   - Font più grande e pesante
+================================ */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #93c5fd; /* Azzurro chiaro */
+    margin-bottom: 15px;
+}
+
+/* ================================
+   LABEL DEI CAMPI
+   - Colore chiaro per essere leggibili
+   - Peso medio per dare importanza
+================================ */
+.form-label {
+    color: #e2e8f0; /* Grigio chiaro */
+    font-weight: 500;
+}
+
+/* ================================
+   INPUT MODERNI
+   - Sfondo scuro
+   - Bordo visibile ma non aggressivo
+   - Testo chiaro
+================================ */
+.input-modern {
+    background: #1e293b;
+    border: 1px solid #475569;
+    color: #f1f5f9; /* Testo chiaro */
+}
+
+/* ================================
+   EFFETTO FOCUS SUGLI INPUT
+   - Bordo azzurro
+   - Glow leggero per evidenziare il campo attivo
+================================ */
+.input-modern:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 5px #60a5fa;
+}
+
+/* ================================
+   BOTTONE PRINCIPALE (Salva)
+   - Gradiente moderno
+   - Testo bianco
+   - Angoli arrotondati
+================================ */
+.btn-gradient {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* ================================
+   BOTTONE SECONDARIO (Annulla)
+   - Bordo e testo chiaro
+   - Coerente con tema scuro
+================================ */
+.btn-outline-light {
+    border-color: #e2e8f0;
+    color: #e2e8f0;
+}

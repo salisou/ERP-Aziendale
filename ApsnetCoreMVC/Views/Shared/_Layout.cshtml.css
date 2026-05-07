@@ -1,48 +1,153 @@
-﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* RESET BASE */
+html, body {
+    height: 100%;
+}
 
+/* LINK */
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 a {
-  color: #0077cc;
+    color: #38bdf8;
 }
 
+/* BOTTONI */
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    border: none;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+/* NAV PILLS */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: white;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
 }
 
+/* BORDI */
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #334155;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #334155;
 }
 
+/* SHADOW */
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+/* BODY MODERNO */
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+/* ===== LAYOUT FLEX (FOOTER SEMPRE IN BASSO) ===== */
+.layout-flex {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTENUTO ESPANSO */
+.content {
+    flex: 1;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-modern {
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+    .navbar-modern .nav-link {
+        color: #cbd5f5;
+        transition: 0.3s;
+    }
+
+        .navbar-modern .nav-link:hover {
+            color: #38bdf8;
+        }
+
+/* ===== FOOTER ===== */
+.footer-modern {
+    background: #1e293b;
+    color: #94a3b8;
+    padding: 20px;
+    border-top: 1px solid #334155;
+    text-align: center;
+}
+
+/* ===== CARD ===== */
+.card-modern {
+    background: #1e293b;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ===== INPUT ===== */
+.input-modern {
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    border-radius: 10px;
+}
+
+    .input-modern:focus {
+        border-color: #38bdf8;
+        box-shadow: 0 0 10px rgba(56,189,248,0.5);
+        background: #0f172a;
+        color: white;
+    }
+
+/* LABEL */
+.form-label {
+    color: #cbd5f5;
+}
+
+/* ===== BOTTONI CUSTOM ===== */
+.btn-gradient {
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 18px;
+    transition: 0.3s;
+}
+
+    .btn-gradient:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+
+/* ===== TABELLA ===== */
+.table-modern {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1e293b;
+}
+
+    .table-modern thead {
+        background: #334155;
+        color: #e2e8f0;
+    }
+
+    .table-modern tbody tr:hover {
+        background: #1e293b !important;
+        transition: 0.3s;
+    }
+
+/* ===== BADGE ===== */
+.badge-modern {
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
 }

@@ -1,0 +1,58 @@
+﻿@model FatturaDto
+
+<div class="container mt-5">
+    <h2 class="title text-center  mb-4">Crea una nuova fattura</h2>
+
+    <div class="card-moder p-4">
+        <form method="post">
+            <div class="row b-3">
+                <div class="col-md-6">
+                   <label class="form-label">Numero</label>
+                   <input class="form-control input-modern" asp-for="Numero"/>
+                   <span class="text-danger" asp-validation-for="Numero"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Stato</label>
+                    <select class="form-control mr-sm-2 custom-select input-modern" asp-for="Stato">
+                        <option selected>Seleziona...</option>
+                        <option>In asttesa</option>
+                        <option>Pagata</option>
+                        <option>Annullata</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="Stato"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Data Emissione</label>
+                    <input type="date" class="form-control input-modern" asp-for="DataEmissione" />
+                </div>
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-primary">Salva la Fatturas</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@* numero, 
+cliente, 
+email, 
+telefono, 
+dataemizione,
+datascadenza, 
+servizio, 
+prezzo,
+quantita*@

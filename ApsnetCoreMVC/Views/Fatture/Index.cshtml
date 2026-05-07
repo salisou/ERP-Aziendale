@@ -1,0 +1,53 @@
+﻿@model List<Fattura>
+
+<h1 class="text-center title">Gestione Fatture</h1>
+
+<a class="btn btn-outline-success mb-3" asp-controller="Fatture" asp-action="Create">
+    Aggiungi una fattura
+</a>
+
+<table class="table table-success table-striped table-moder">
+    <thead>
+        <tr>
+            <th>Fattura Id</th>
+            <th>Numero</th>
+            <th>Stato</th>
+            <th>Data Emissione</th>
+            <th>Servizio</th>
+            <th>Prezzo Unitario</th>
+            <th>Totale</th>
+            <th>Nome Cliente</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var f in Model)
+        {
+            decimal totale = f.Quantita * f.PrezzoUnitario;
+
+            <tr class="row-moder">
+                <td>@f.FatturaId</td>
+                <td>@f.Numero</td>
+                <td>@f.Stato</td>
+                <td>@f.DataEmissione?.ToShortDateString()</td>
+                <td>@f.Servizio</td>
+                <td>@f.PrezzoUnitario €</td>
+                <td>@totale €</td>
+                <td>@f.NomeCliente</td>
+
+                <td>
+                    <a class="btn btn-secondary btn-sm"
+                           asp-controller="Fatture" asp-action="Edit" asp-route-id="@f.FatturaId">
+                        Modifica
+                    </a>
+
+                    <a class="btn btn-danger btn-sm"
+                           asp-controller="Fatture" asp-action="Delete" asp-route-id="@f.FatturaId">
+                        Elimina
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
