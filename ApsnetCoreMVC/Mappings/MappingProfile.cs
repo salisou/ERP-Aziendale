@@ -6,10 +6,12 @@ namespace ApsnetCoreMVC.Mappings
 {
     public class MappingProfile : Profile
     {
-        protected MappingProfile()
+        public MappingProfile()
         {
-            CreateMap<FatturaDto, Fattura>();
-            CreateMap<Fattura, FatturaDto>();
+            //CreateMap<FatturaDto, Fattura>();
+            CreateMap<Fattura, FatturaDto>().ReverseMap();
         }
     }
 }
+
+// dotnet remove package AutoMapper.Extensions.Microsoft.DependencyInjection
